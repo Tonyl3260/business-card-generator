@@ -9,43 +9,45 @@
     $(function() {
       //get value 
       $('button').click(function() {
-        var business= $('#Business').val();
+        var business = $('#Business').val();
         var name = $('#Name').val();
         var phone = $('#phone').val();
         var occupation = $('#Occupation').val();
         var location = $('#Location').val();
         var font = $('#Font-family').val();
-        var color = $('#Color').val();
+        var colorText = $('#Color-text').val();
+
         //print the text  
-        var card = business+ "<div>" + name + "<div>" + phone + "<div>" + occupation + "<div>" + location;
-        $('h1').html(card).css("color", color).css("font-family", font)
+        var card = business + "<div>" + name + "<div>" + phone + "<div>" + occupation + "<div>" + location;
+        $('h1').html(card).css("color", colorText).css("font-family", font)
       })
     })
     
+    //pick font
     function changeFont(_name) {
       document.body.style.fontFamily = _name;
       document.textarea = _name;
     }
   </script>
 </head>
-
+ 
 <body>
   Business Name: <input id="Business"><br> Name: <input id="Name"><br> Telephone Number: <input type="tel" id="phone">
-  <br> Occupation: <input id="Occupation"><br>Location: <input id="Location"><br> 
-  Font-family <select id="fs" onchange="changeFont(this.value);">
+  <br> Occupation: <input id="Occupation"><br>Location: <input id="Location"><br> Font-family: <select id="Font-family" onchange="changeFont(card);">
             <option value="arial">Arial</option>
             <option value="verdana">Verdana</option>
             <option value="impact">Impact</option>
             <option value="'ms comic sans'">MS Comic Sans</option>
-        </select><br>
-  Color <input id="Color"><br>
+        </select><br> Color: <input id="Color-text"><br>
   <button>Generate Business Card</button>
   <h1> </h1>
 </body>
-<style>  
-h1 {
-  border-style: solid;
-  padding: 50px;
-}
+<style>
+  h1 {
+    border-style: solid;
+    padding: 50px;
+    text-align: center;
+  }
 </style>
+
 </html>
