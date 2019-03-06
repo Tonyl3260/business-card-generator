@@ -32,16 +32,34 @@
 </head>
 
 <body>
-  
-  Business Name: <input id="Business"><br> Name: <input id="Name"><br> Telephone Number: <input type="tel" id="phone">
-  <br> Occupation: <input id="Occupation"><br>Location: <input id="Location"><br> Font-family: <select id="Font-family" onchange="changeFont(card);">
-            <option value="arial">Arial</option>
-            <option value="verdana">Verdana</option>
-            <option value="impact">Impact</option>
-            <option value="'ms comic sans'">MS Comic Sans</option>
-        </select><br> Color: <input id="Color-text"><br>
+  <span>Business Name:</span>
+  <input id="Business" maxlength="15">
+  <br>
+  <span>Name:</span>
+  <input id="Name" maxlength="15">
+  <br>
+  <span>Telephone Number:</span>
+  <input type="tel" id="phone" maxlength="12">
+  <br>
+  <span>Occupation:</span>
+  <input id="Occupation" maxlength="15">
+  <br>
+  <span>Location:</span>
+  <input id="Location" maxlength="15">
+  <br>
+  <span>Font-family:</span>
+  <select id="Font-family" onchange="changeFont(card);">
+    <option value="arial">Arial</option>
+    <option value="verdana">Verdana</option>
+    <option value="impact">Impact</option>
+    <option value="'ms comic sans'">MS Comic Sans</option>
+  </select>
+  <br>
+  <span>Color:</span>
+  <input id="Color-text">
+  <br>
   <button>Generate Business Card</button>
-  <h1> </h1>
+  <h1></h1>
 </body>
 <style>
   h1 {
